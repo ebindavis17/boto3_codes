@@ -4,7 +4,7 @@ from botocore.exceptions import ClientError
 import logging
 import re
 logger = logging.getLogger()
-role_name='aab-administrator'
+role_name='*******'
 region=[]
 service=[]
 resource=[]
