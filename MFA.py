@@ -29,7 +29,7 @@ def lambda_handler(event,context):
             physicalString='All users are enabled'
             
     response1 = sns.publish(
-        TopicArn='arn:aws:sns:eu-west-1:275403599531:ebin-sns1',
+        TopicArn='******',
         Message=physicalString,
         Subject='List of users with no MFA Device activated') 
     
