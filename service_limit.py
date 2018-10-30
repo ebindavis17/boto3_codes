@@ -1,3 +1,5 @@
+#Python script checks for the services that are hitting 80 % limit. Normally Trusted Advisor helps to find the service limits.
+#This script uses Trusted advisor boto3 function to fetch all the services that are hitting 80 % and outputs to a CSV file.
 import boto3
 import csv
 from botocore.exceptions import ClientError
@@ -80,7 +82,7 @@ def s3(account_details):
 
     limit_details=zip(region,servicename,resource,limit_amount,current_usage,account,status)
     header = ['Region','Service','Resource','Limit Amount','Current Usage','Account','Status']
-    csvfile = "/tmp/testingS3.csv"
+    csvfile = "/path/to/savetheresult.csv"
     with open(csvfile, "w") as testing:
           writer = csv.writer(testing, lineterminator='\n')
           writer.writerow(header)
