@@ -1,7 +1,7 @@
 #Python script checks for the services that are hitting 80 % limit. Normally Trusted Advisor helps to find the service limits.
 #This script uses Trusted advisor boto3 function to fetch all the services that are hitting 80 % and outputs to a CSV file.
 
-#Note: Trusted advisor support only few servi
+#Note: Trusted advisor support only few services.
 import boto3
 import csv
 from botocore.exceptions import ClientError
